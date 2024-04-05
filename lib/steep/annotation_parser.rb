@@ -1,5 +1,8 @@
 module Steep
   class AnnotationParser
+    # Wrapper around RBS::Parser. 
+    # It automatically converts the RBS AST Nodes produced by the RBS Parser
+    # into Steep AST Nodes.
     VAR_NAME = /[a-z][A-Za-z0-9_]*/
     METHOD_NAME = Regexp.union(
       /[^.:\s]+/
